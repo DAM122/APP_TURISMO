@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewRoot"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleMonumentoActivity">
+
+    <ImageView
+        android:id="@+id/ivMonumento"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/capricho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <TextView
+        android:id="@+id/tvNombreMonumento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/ivMonumento"
+        android:text="Nombre del Monumento"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@id/ivMonumento"
+        app:layout_constraintTop_toTopOf="@id/ivMonumento" />
+
+
+    <TextView
+        android:id="@+id/tvArtista"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivMonumento"
+        android:layout_below="@id/tvNombreMonumento"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:text="Artista"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@id/ivMonumento"
+        app:layout_constraintTop_toBottomOf="@id/tvNombreMonumento" />
+
+    <TextView
+        android:id="@+id/tvValoracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivMonumento"
+        android:layout_below="@id/tvArtista"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:text="Valoración:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/ivMonumento"
+        app:layout_constraintTop_toBottomOf="@id/tvArtista"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvValoracion"
+        android:layout_marginStart="-73dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/ivMonumento"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="3"
+        android:scaleX="0.3"
+        android:scaleY="0.3"
+        android:stepSize="0.5"
+        app:layout_constraintStart_toEndOf="@id/ivMonumento"
+        app:layout_constraintTop_toBottomOf="@id/tvValoracion" />
+
+    <Button
+        android:id="@+id/btnComoLlegar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="-5dp"
+        android:text="Como llegar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="@+id/ivMonumento"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+    <TextView
+        android:id="@+id/tvComentar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Agregar un nueco comentario"
+        android:textSize="16sp"
+        android:gravity="fill_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivMonumento"/>
+
+    <TextView
+        android:id="@+id/tvDescripcionMonumento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Descripción del monumento"
+        android:textSize="16sp"
+        android:gravity="fill_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvComentar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvComentarios"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescripcionMonumento"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

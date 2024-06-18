@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre: Capricho de Gaudi"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvLocalidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Localidad: Comillas"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha: 1883 - 1885"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvArquitectos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arquitectos: Antoni Gaudi Comet, Cristóbal Cascante Colom"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvEstilosArtisticos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estilos artísticos: Modernismo, Gótico"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvInteriorVisitable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interior visitable: Si"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvParkingPrivado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parking privado: No"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefono: 942 720 365"
+        android:textSize="18sp" />
+
+</LinearLayout>

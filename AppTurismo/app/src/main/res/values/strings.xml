@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppTurismo</string>
+    <string name="logout_content_description">Cerrar sesión</string>
+    <string name="home_content_description">Inicio</string>
+    <string name="back_content_description">Atrás</string>
+    <string name="fab_comentario_description">Botón de Comentario</string>
+</resources>
